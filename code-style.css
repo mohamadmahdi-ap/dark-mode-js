@@ -1,0 +1,57 @@
+.code-box{
+    background: var(--background);
+    border-radius: 0.5rem;
+}
+.code-header{
+    border-bottom: 2px solid var(--box);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--title);
+}
+.code-base{
+    padding: 15px;
+}
+.copy-btn{
+    cursor: pointer;
+    padding: 15px ;
+    border-left: 2px solid var(--box);
+}
+.copy-btn:hover{
+    background: var(--box-shadow);
+}
+.code{
+    color: var(--text);
+    padding: 15px;
+}
+.tab1{
+    padding-left: 25px;
+}
+.tab2{
+    padding-left: 50px;
+}
+.tab3{
+    padding-left: 75px;
+}
+
+.tag{
+    color: #bb373f;
+}
+.comment{
+    color: #108b05;
+}
+.attribute{
+    color: #980da1;
+}
+.value{
+    color: #3ed119;
+}
+.method{
+    color: #6464e0;
+}
+.argumant{
+    color: #ef5de5;
+}
+.selector{
+    color: #f6ae29;
+}

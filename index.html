@@ -1,0 +1,197 @@
+<!DOCTYPE HTMl>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="code-style.css">
+    <title>Dark Light</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>Mode</h2>
+            <i class="fi fi-rr-bulb" id="toggle"></i>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>dark Light Mode</h1>
+            <p>
+                Light-on-dark color scheme, also called dark mode, is a supplemental mode that uses a color scheme in
+                which the content of a webpage is displayed on a dark background. Such a color scheme reduces the light
+                emitted by screens and enhances readability. Switching to dark mode allows website users to move to an
+                eye-friendly and resource-saving design whenever they want.
+            </p>
+            <h4>Steps to Create Dark/Light mode:</h4>
+            <ul>
+                <li>Create an HTML Document.</li>
+                <li>Create CSS for the document file as well as for dark mode.</li>
+                <li>Add a switch/toggler to toggle between light and dark modes.</li>
+                <li>Add functionality to the switch/toggler to toggle between light and dark mode using javascript.</li>
+            </ul>
+            <div class="code-box">
+                <div class="code-header">
+                    <div class="code-base">index.html</div>
+                    <div class="copy-btn" id="html" onclick="copyCode(id)">copy</div>
+                </div>
+                <div class="code">
+
+                    <div class="tag">
+                        <span><</span><span>html></span>
+                    </div>
+                    <div class="tag tab1">
+                        <span><</span><span>head></span>
+                    </div>
+                    <div class="tab2">
+                        <span class="tag"><</span><span class="tag">title></span>Title<span class="tag"><</span><span class="tag">/title></span>
+                    </div>
+
+                    <div class="tab2">
+                        <span class="tag"><</span><span class="tag">link</span> <span class="attribute">rel=</span><span class="value">"stylesheet"</span> <span class="attribute">href=</span><span class="value">"style.css"</span><span class="tag">></span>
+                    </div>
+                    <div class="tag tab1">
+                        <span><</span><span>/head></span>
+                    </div>
+                    <div class="tag tab1">
+                        <span><</span><span>body></span>
+                    </div>
+                    <div class="tab2">
+                        <span class="tag"><</span><span class="tag">span</span> <span class="attribute">id=</span><span class="value">"toggle"</span><span class="tag">>*<span><<span><span class="tag">/span></span>
+                    </div>
+                    <div class="comment tab2">
+                        <span><</span><span>!-- codes --></span>
+                    </div>
+                    <div class="tab2">
+                        <span class="tag"><</span><span class="tag">script</span> <span class="attribute">src=</span><span class="value">"script.js"<span class="tag">><</span><span class="tag">/script></span>
+                    </div>
+                    <div class="tag tab1">
+                        <span><</span><span>/body></span>
+                    </div>
+                    <div class="tag">
+                        <span><</span><span>html></span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="code-box">
+                <div class="code-header">
+                    <div class="code-base">style.css</div>
+                    <div class="copy-btn" id="css" onclick="copyCode(id)">copy</div>
+                </div>
+                <div class="code">
+
+                    <div>
+                        <span class="attribute">:root {</span>
+                    </div>
+                    <div class="tab1">--background: #ededed;</div>
+                    <div class="tab1">--title: black;</div>
+                    <div class="tab1">--text: #222;</div>
+                    <div class="tab1">--box: #fff;</div>
+                    <div class="tab1">--box-shadow: #cdcdcd;</div>
+                    <div>
+                        <span class="attribute">}</span>
+                    </div>
+
+                    <div>
+                        <span class="selector">.dark-theme {</span>
+                    </div>
+                    <div class="tab1">--background: #222;</div>
+                    <div class="tab1">--title: white;</div>
+                    <div class="tab1">--text: #e6e6e6;</div>
+                    <div class="tab1">--box: #2e2e2e;</div>
+                    <div class="tab1">--box-shadow: #181818;</div>
+                    <div>
+                        <span class="selector">}</span>
+                    </div>
+
+                    <div>
+                        <span class="selector">body {</span>
+                    </div>
+                    <div class="tab1">background: var(--background);</div>
+                    <div>
+                        <span class="selector">}</span>
+                    </div>
+
+                    <div>
+                        <span class="selector">h1, h2, h3, h4, h5, h6, a {</span>
+                    </div>
+                    <div class="tab1">color: var(--title);</div>
+                    <div>
+                        <span class="selector">}</span>
+                    </div>
+
+                    <div>
+                        <span class="selector">p, li {</span>
+                    </div>
+                    <div class="tab1">color: var(--text);</div>
+                    <div>
+                        <span class="selector">}</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="code-box">
+                <div class="code-header">
+                    <div class="code-base">script.js</div>
+                    <div class="copy-btn" id="js" onclick="copyCode(id)">copy</div>
+                </div>
+                <div class="code">
+                    <div>
+
+                        <span class="attribute">var</span> darkLightBtn <span class="attribute">=</span> document.<span
+                            class="method">getElementById</span><span class="argumant">("toggle")</span><span
+                            class="attribute">;</span>
+                    </div>
+                    <div>
+                        darkLightBtn.<span class="method">addEventListener</span><span class="argumant">("click" ,()=><span class="value">{</span></span>
+                    </div>
+                    <div class="tab1">
+
+                        document.<span class="tag">body</span>.<span class="method">classList</span>.<span
+                            class="attribute">toggle</span><span class="argumant">("dark-theme")</span><span
+                            class="attribute">;</span>
+                    </div>
+
+                    <div>
+                        <span class="value">}</span><span class="argumant">)</span>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <div class="massage" id="massage">
+        <h4 class="massage-content">copied!</h4>
+    </div>
+    <footer>
+        <p>
+            written by <a href="https://github.com/mohamadmahdi-ap" target="_blank">@mohamadmahdi-ap</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        let codes = [
+            "<html><head><title>Title</title><link rel='stylesheet' href='style.css'></head><body><span id='toggle'>*</span><!--codes--><script src='script.js'></ script></ body></html>",
+            ":root {--background: #ededed;--title: black;--text: #222;--box: #fff;--box-shadow: #cdcdcd;}.dark-theme {--background: #222;--title: white;--text: #e6e6e6;--box: #2e2e2e;--box-shadow: #181818;}h1,h2,h3,h4,h5,h6,a,i {color: var(--title);}p ,li{color: var(--text);font-size: 16px;}body {background: var(--background);}",
+            "var darkLightBtn = document.getElementById('toggle');darkLightBtn.addEventListener('click', () => {document.body.classList.toggle('dark-theme');})"
+        ];
+        let massageBox = document.getElementById("massage")
+        function copyCode(id) {
+            let code = (id=="html")? codes[0] : (id=="css")? codes[1]: codes[2] ;
+            navigator.clipboard.writeText(code)
+            massageBox.style.right = "20px"
+            setTimeout(()=>{
+                massageBox.style.right = "-150px"
+            },1300)
+        }
+    </script>
+</body>
+
+</html>
